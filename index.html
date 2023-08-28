@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--=============== FAVICON ===============-->
+        <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+
+        <!--=============== REMIX ICONS ===============-->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+        <!--=============== CSS ===============-->
+        <link rel="stylesheet" href="assets/css/styles.css">
+        <!--===============js==============-->
+        
+        <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+        <!-- <script src="./assets/js/main.js"></script> -->
+
+        <title>PLANTIFY</title>
+    </head>
+    <body>
+        <!--==================== HEADER ====================-->
+        <header class="header" id="header">
+            <nav class="nav container">
+                <a href="#" class="nav__logo">
+                    <i class="ri-leaf-line nav__logo-icon"></i> Hariyali
+                </a>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="index.html" class="nav__link active-link">Home</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#products" class="nav__link">Products</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#about" class="nav__link">About</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#faqs" class="nav__link">FAQs</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#contact" class="nav__link">Contact Us</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#login" class="nav__link">Login</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#register" class="nav__link">Register</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#tutorials" class="nav__link">Tutorials</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#+" class="nav__link">Plantify +</a>
+                        </li>
+                    </ul>
+
+                    <div class="nav__close" id="nav-close">
+                        <i class="ri-close-line"></i>
+                    </div>
+                </div>
+
+                <div class="nav__btns">
+                    <!-- Theme change button -->
+                    <i class="ri-moon-line change-theme" id="theme-button"></i>
+
+                    <div class="nav__toggle" id="nav-toggle">
+                        <i class="ri-menu-line"></i>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main class="main">
+            <!--==================== HOME ====================-->
+            <section class="home" id="home">
+                <div class="home__container container grid">
+                    <img src="assets/img/home.png" alt="" class="home__img">
+
+                    <div class="home__data">
+                        <h1 class="home__title">
+                            Plants add value <br> to your life.
+                        </h1>
+                        <p class="home__description">
+                            Get perfectly suitable plants for every type of infrastructure at an affordable rate.
+                            Authentify your ideas with the richness of the green leaves.
+                        </p>
+                        <a href="#products" class="button button--flex">
+                            Explore <i class="ri-arrow-right-down-line button__icon"></i>
+                        </a>
+                    </div>
+
+                    <div class="home__social">
+                        <span class="home__social-follow">Follow Us</span>
+
+                        <div class="home__social-links">
+                            <a href="https://www.facebook.com/st.fit/" target="_blank" class="home__social-link">
+                                <i class="ri-facebook-fill"></i>
+                            </a>
+                            <a href="https://www.instagram.com/dev.exe__/?hl=en" target="_blank" class="home__social-link">
+                                <i class="ri-instagram-line"></i>
+                            </a>
+                            <a href="https://twitter.com/hashtag/plants" target="_blank" class="home__social-link">
+                                <i class="ri-twitter-fill"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--===========================Tutorials============================-->
+            <section class="home" id="tutorials">
+                <div class="home__container container grid">
+                    <h1>Video Tutorials</h1><br>
+                    <br><h2>How to get rid of bugs</h2><br>
+                    <video width="910" height="480" controls>
+                        <source src="C:\Users\Dev\OneDrive\Desktop\programming\plantify\plantify\assets\vid\Y2Mate.is - How to Organically Get Rid of Bugs in a House Plant's Soil-B9tnoVheE4Y-720p-1657474492215.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video>
+                      <br><h2>How to prepare a soil mix</h2><br>
+                      <video width="910" height="480" controls>
+                        <source src="C:\Users\Dev\OneDrive\Desktop\programming\plantify\plantify\assets\vid\Y2Mate.is - How to prepare soil mix for Indoor plants  Ep.6 Garden Up Basics-ofWJN4Tw7bo-1080p-1657474312925.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video>
+                      <br><h2>How to repot a plant</h2><br>
+                      <video width="910" height="480" controls>
+                        <source src="C:\Users\Dev\OneDrive\Desktop\programming\plantify\plantify\assets\vid/Y2Mate.is - How to repot a plant  Beginners Guide to Repotting-Fy8kP2EYpcY-720p-1657456056878.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video>
+                      </div>
+                      </section>
+
+            <!--==================== ABOUT ====================-->
+            <section class="about section container" id="about">
+                <div class="about__container grid">
+                    <img src="assets/img/about.png" alt="" class="about__img">
+
+                    <div class="about__data">
+                        <h2 class="section__title about__title">
+                            Who we are and <br> Why to prefer us
+                        </h2>
+
+                        <p class="about__description">
+                            Our website wholly focuses on:
+                        </p>
+
+                        <div class="about__details">
+                    
+                            <p class="about__details-description">
+                                <i class="ri-checkbox-fill about__details-icon"></i>
+                                Delivering amazing plants to our customers at affordable prices along with expert supervision
+                            </p>
+                            <p class="about__details-description">
+                                <i class="ri-checkbox-fill about__details-icon"></i>
+                                Free home delivery
+                            </p>
+                            <p class="about__details-description">
+                                <i class="ri-checkbox-fill about__details-icon"></i>
+                                Plant setup with the help of our professionals
+                            </p>
+                        </div>
+
+                        <a href="#" class="button--link button--flex">
+                            Shop Now! <i class="ri-arrow-right-down-line button__icon"></i>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!--==================== STEPS ====================-->
+            <section class="steps section container">
+                <div class="steps__bg">
+                    <h2 class="section__title-center steps__title">
+                        Get your first plant right now!
+                    </h2>
+
+                    <div class="steps__container grid">
+                        <div class="steps__card">
+                            <div class="steps__card-number">#1</div>
+                            <h3 class="steps__card-title">Choose a Plant</h3>
+                            <p class="steps__card-description">
+                                Choose from over hundreds of varieties of plants from our site.
+                            </p>
+                        </div>
+
+                        <div class="steps__card">
+                            <div class="steps__card-number">#2</div>
+                            <h3 class="steps__card-title">Place your order</h3>
+                            <p class="steps__card-description">
+                                Add your plant to the cart and select a payment option.
+                            </p>
+                        </div>
+
+                        <div class="steps__card">
+                            <div class="steps__card-number">#3</div>
+                            <h3 class="steps__card-title">Your plants at your doorstep!</h3>
+                            <p class="steps__card-description">
+                                Wake up and find your plant through our delivery service.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--==================== PRODUCTS ====================-->
+            <section class="product section container" id="products">
+                <h2 class="section__title-center">
+                    Check out our products
+                </h2>
+                <a href="C:\Users\Dev\OneDrive\Desktop\programming\plantify\plantify\store.html" align="center" class="button button--flex">CLICK HERE</a>
+                
+            </section>
+
+            <!--==================== QUESTIONS ====================-->
+            <section class="questions section" id="faqs">
+                <h2 class="section__title-center questions__title container">
+                    Ask The Expert
+                </h2>
+
+                <div class="questions__container container grid">
+                    <div class="questions__group">
+                        <div class="questions__item">
+                            <header class="questions__header">
+                                <i class="ri-add-line questions__icon"></i>
+                                <h3 class="questions__item-title">
+                                    Why are my flowers falling or dying?
+                                </h3>
+                            </header>
+
+                            <div class="questions__content">
+                                <p class="questions__description">
+                                    Improper watering is often the reason for sudden dying of plants. <br>If you forgot to water for a few days, it's possible that the roots dried up. <br>However, the opposite is more likely, as too much water is often to blame for dying container plants.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="questions__item">
+                            <header class="questions__header">
+                                <i class="ri-add-line questions__icon"></i>
+                                <h3 class="questions__item-title">
+                                    What causes leaves to become pale?
+                                </h3>
+                            </header>
+
+                            <div class="questions__content">
+                                <p class="questions__description">
+                                    It may be caused by reduced blood flow and oxygen or by a decreased number of red blood cells.<br> It can be a manifestation of emotions such as fear (“pale as a ghost”), or it can be a symptom of serious medical conditions such as severe anemia, bloodstream infection, or frostbite.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="questions__item">
+                            <header class="questions__header">
+                                <i class="ri-add-line questions__icon"></i>
+                                <h3 class="questions__item-title">
+                                    What causes brown crispy leaves?
+                                </h3>
+                            </header>
+
+                            <div class="questions__content">
+                                <p class="questions__description">
+                                    Browning leaves are typically caused by under watering, sunburn, or overwatering. <br>If the leaf tips are turning brown and crunchy, the soil likely became too dry for too long in between waterings. This can also cause the plant to drop leaves.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="questions__group">
+                        <div class="questions__item">
+                            <header class="questions__header">
+                                <i class="ri-add-line questions__icon"></i>
+                                <h3 class="questions__item-title">
+                                    How do I choose a plant?
+                                </h3>
+                            </header>
+
+                            <div class="questions__content">
+                                <p class="questions__description">
+                                    You can check our 'Products' section for details!
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="questions__item">
+                            <header class="questions__header">
+                                <i class="ri-add-line questions__icon"></i>
+                                <h3 class="questions__item-title">
+                                    How do I change the pots?
+                                </h3>
+                            </header>
+
+                            <div class="questions__content">
+                                <p class="questions__description">
+                                   1. Pour a layer of fresh, pre-moistened mix in the planter you're potting into, and pack it down.<br>
+2. Remove the plant from the current pot. <br>
+3. Loosen and prune the roots.<br>
+4. Gently unbind any loose roots. <br>
+5. Set plant in new planter. <br>
+6. Add mix. <br>
+7. Even it out. <br>
+8. You're all set!
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="questions__item">
+                            <header class="questions__header">
+                                <i class="ri-add-line questions__icon"></i>
+                                <h3 class="questions__item-title">
+                                    Why are gnats flying around my plant?
+                                </h3>
+                            </header>
+
+                            <div class="questions__content">
+                                <p class="questions__description">
+                                    The most common cause of fungus gnats in plants is overwatering, so be sure to let your soil dry out in between waterings as often as possible. <br>Check the soil with your finger every few days, and once you feel it starting to get dry, leave it like that for about a week to keep gnats away.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--==================== CONTACT ====================-->
+            <section class="contact section container" id="contact">                
+                <div class="contact__container grid">
+                    <div class="contact__box">
+                        <h2 class="section__title">
+                            You can contact us for any queries through the given information
+                        </h2>
+
+                        <div class="contact__data">
+                            <div class="contact__information">
+                                <h3 class="contact__subtitle">Call us for instant support</h3>
+                                <span class="contact__description">
+                                    <i class="ri-phone-line contact__icon"></i>
+                                    +91 9619185467
+                                </span>
+                            </div>
+
+                            <div class="contact__information">
+                                <h3 class="contact__subtitle">Mail Us</h3>
+                                <span class="contact__description">
+                                    <i class="ri-mail-line contact__icon"></i>
+                                    contact@plantify.com
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <form action=""  class="contact__form">
+                        <div class="contact__inputs">
+                            <div class="contact__content">
+                                <input type="email" placeholder=" " class="contact__input">
+                                <label for="" class="contact__label">Email</label>
+                            </div>
+
+                            <div class="contact__content">
+                                <input type="text" placeholder=" " class="contact__input">
+                                <label for="" class="contact__label">Subject</label>
+                            </div>
+
+                            <div class="contact__content contact__area">
+                                <textarea name="message" placeholder=" " class="contact__input"></textarea>                              
+                                <label for="" class="contact__label">Message</label>
+                            </div>
+                        </div>
+
+                        <button class="button button--flex">
+                            Send Message
+                            <i class="ri-arrow-right-up-line button__icon"></i>
+                        </button>
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <!--==================== LOGIN =====================-->
+        <section class="contact section container" id="login">                
+            <div class="contact__container grid">
+                <div class="contact__box">
+                    <h2 class="section__title">
+                    Login to our website!
+                    </h2>
+
+                    <div class="contact__data">
+                        <div class="contact__information">
+                            <h3 class="contact__subtitle">If you are an existing user</h3>
+                        </div>
+
+                </div>
+
+                <form action="" id="contactFormLog" class="contact__form">
+                    <div class="contact__inputs">
+                        <div class="contact__content">
+                            <input type="email" id="name2" placeholder=" " class="contact__input">
+                            <label for="" class="contact__label">Email</label>
+                        </div>
+
+                        <div class="contact__content">
+                            <input type="password" id="pass1" placeholder=" " class="contact__input">                            
+                            <label for="" class="contact__label">Password</label>
+                        </div>
+                    </div>
+                    <a href="#home" type="submit" class="button button--flex">
+                        Login! <i class="ri-arrow-right-up-line button__icon"></i>
+                    </a>
+                    <div class="contact__data">
+                        <div class="contact__information">
+                            <h3 class="contact__subtitle">Or Register if you are new to this website</h3>
+                            <a href="#register"  class="button button--flex">
+                               <i> Register</i>
+                            </a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+<!--==================== Register =====================-->
+<section class="contact section container" id="register">                
+    <div class="contact__container grid">
+        <div class="contact__box">
+            <h2 class="section__title">
+            Register to our website!
+            </h2>
+
+            <div class="contact__data">
+                <div class="contact__information">
+                    <h3 class="contact__subtitle">Enter your valid credentials</h3>
+                </div>
+        </div>
+
+        <form action=""  id="contactFormReg" class="contact__form">
+            <div class="contact__inputs">
+                
+                <div class="contact__content">
+                    <input type="text" id="name1" placeholder=" " class="contact__input">
+                    <label for="" class="contact__label">Name</label>
+                </div>
+                
+                <div class="contact__content">
+                    <textarea type="text" id="addr" placeholder=" " class="contact__input"></textarea>
+                    <label for="" class="contact__label">Address</label>
+                </div>
+
+                <div class="contact__content">
+                    <input type="email" id="email" placeholder=" " class="contact__input" required />
+                    <label for="" class="contact__label">Email</label>
+                </div>
+
+                <div class="contact__content">
+                    <input type="password" id="pass" placeholder=" " class="contact__input">                            
+                    <label for="" class="contact__label">Create Password</label>
+                </div>
+
+                <div class="contact__content">
+                    <input type="text" placeholder=" " class="contact__input">                            
+                    <label for="" class="contact__label">Confirm Password</label>
+                </div>
+
+            </div>
+    
+            <div class="contact__data">
+                <div class="contact__information">
+                    <button type="submit" class="button button--flex" >Register</button><br>
+                    </div></div>
+           <!-- <div class="contact__data">
+                <div class="contact__information">
+                    <script>
+                        var subscription = window.confirm("Is this a subscription? (Y/N)"); 
+
+                                if (subscription == true) {
+                                    window.alert("activation key available");
+                                    isSubscription = true;
+                                    <a href="C:\Users\Dev\OneDrive\Desktop\programming\plantify\plantify\gatewayp/payment.html" ></a>
+                                } else {
+                                    isSubscription = false;
+                                    window.alert("No activation key");
+                                }
+                    </script>-->
+                    
+
+                    <!-- <a href="#home" type="submit" class="button button--flex">
+                       <i> Register</i>
+                    <a href="C:\Users\Dev\OneDrive\Desktop\programming\plantify\plantify\gatewayp/payment.html" class="button--flex product__button"></a>
+                </div>-->
+                <br>
+                <br>
+                <!--==================== PLANTIFY + =====================-->
+<section class="contact section container" id="+">                
+    <div class="contact__container grid">
+        <div class="contact__box">
+                <h1>
+                    <a href="#+" class="nav__logo">
+                        <i class="ri-leaf-line nav__logo-icon"></i> Plantify+
+                        </a></h1>
+                <br><label>Click here to become a member of Plantify +</label><br><br>
+                <script>
+                    function CallSub(){
+
+                        var subscription = window.confirm("Is this a subscription? (Y/N)"); 
+
+                            if (subscription == true) {
+                                window.alert("activation key available");
+                                isSubscription = true;
+                                window.location = "C:/Users/Dev/OneDrive/Desktop/programming/plantify/plantify/gatewayp/gatewaypz/gatewayp/payment.html"
+                            } else {
+                                isSubscription = false;
+                                window.alert("No activation key");
+                            }
+                      
+                    
+                        // PaymentForm();
+                    }</script>
+                    <div class="contact__data">
+                        <div class="contact__information">
+                            <button type="submit" onclick="CallSub()" class="button button--flex" >Subscribe</button>
+
+            </div>
+        </form>
+    </div>
+    </div>
+    </section>
+</section>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-analytics.js"></script>
+
+<script src="./assets/js/Database.js"></script>
+<!--<script src="./assets/js/Database2.js"></script>-->
+
+
+        <!--==================== FOOTER ====================-->
+        <footer class="footer section">
+            <div class="footer__container container grid">
+                <div class="footer__content">
+                    <a href="#" class="footer__logo">
+                        <i class="ri-leaf-line footer__logo-icon"></i> Plantify
+                    </a>
+
+                    <h3 class="footer__title">
+                        Subscribe to our newsletters <br> to stay updated
+                    </h3>
+
+                    <div class="footer__subscribe">
+                        <input type="email" placeholder="Enter your email" class="footer__input">
+
+                        <button class="button button--flex footer__button">
+                            Subscribe!
+                            <i class="ri-arrow-right-up-line button__icon"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="footer__content">
+                    <h3 class="footer__title">Our Base</h3>
+
+                    <ul class="footer__data">
+                        <li class="footer__information">Department of Information Technology</li>
+                        <li class="footer__information">St. Francis Institute of Technology</li>
+                        <li class="footer__information">Mumbai, India</li>
+                    </ul>
+                </div>
+
+                <div class="footer__content">
+                    <h3 class="footer__title">Contact Us</h3>
+
+                    <ul class="footer__data">
+                        <li class="footer__information">+91 9619185467</li>
+                        
+                        <div class="footer__social">
+                            <a href="https://www.facebook.com/st.fit/" class="footer__social-link">
+                                <i class="ri-facebook-fill"></i>
+                            </a>
+                            <a href="https://www.instagram.com/dev.exe__/?hl=en" class="footer__social-link">
+                                <i class="ri-instagram-line"></i>
+                            </a>
+                            <a href="https://twitter.com/hashtag/plants" class="footer__social-link">
+                                <i class="ri-twitter-fill"></i>
+                            </a>
+                        </div>
+                    </ul>
+                </div>
+
+                <div class="footer__content">
+                    <h3 class="footer__title">
+                        We accept all types of cards!
+                    </h3>
+
+                    <div class="footer__cards">
+                        <img src="assets/img/card1.png" alt="" class="footer__card">
+                        <img src="assets/img/card2.png" alt="" class="footer__card">
+                        <img src="assets/img/card3.png" alt="" class="footer__card">
+                        <img src="assets/img/card4.png" alt="" class="footer__card">
+                    </div>
+                </div>
+            </div>
+
+            <p class="footer__copy">&#169; PLANTIFY. All rigths reserved</p>
+        </footer>
+        
+        <!--=============== SCROLL UP ===============-->
+        <a href="#" class="scrollup" id="scroll-up"> 
+            <i class="ri-arrow-up-fill scrollup__icon"></i>
+        </a>
+
+        <!--=============== SCROLL REVEAL ===============-->
+        <script src="assets/js/scrollreveal.min.js"></script>
+        
+        <!--=============== MAIN JS ===============-->
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>

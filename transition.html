@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="style.css" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300&family=Hanalei&display=swap" rel="stylesheet" />
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+  
+            /* Common styles of project which
+               are applied to body */
+            body {
+                background-color: rgb(255, 255, 255);
+                overflow: hidden;
+                font-family: "Dosis", sans-serif;
+                color: rgb(0, 0, 0);
+            }
+  
+            /* Style to our heading */
+            h1 {
+                display: flex;
+                margin-top: 3em;
+                justify-content: center;
+            }
+  
+            .container {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+  
+            span {
+                display: inline-block;
+                width: 0.6em;
+                height: 0.6em;
+                border-radius: 50%;
+                margin: 0 0.125em;
+                background-color: rgb(235, 217, 217);
+                opacity: 0;
+            }
+  
+            /* Calling childs using nth-child() property */
+            span:last-child {
+                animation: move-right 3s infinite;
+                animation-delay: 100ms;
+                background-color: #000;
+            }
+            span:nth-child(5) {
+                animation: move 3s infinite;
+                animation-delay: 200ms;
+                background-color: rgb(41, 133, 22);
+            }
+            span:nth-child(4) {
+                animation: move-right 3s infinite;
+                animation-delay: 300ms;
+                background-color: #000;
+            }
+            span:nth-child(3) {
+                animation: move 3s infinite;
+                animation-delay: 400ms;
+                background-color: rgb(41, 133, 22);
+            }
+            span:nth-child(2) {
+                animation: move-right 3s infinite;
+                animation-delay: 500ms;
+                background-color: #000;
+            }
+            span:first-child {
+                animation: move 3s infinite;
+                animation-delay: 600ms;
+                background-color: rgb(41, 133, 22);
+            }
+  
+            /* Animations effect */
+            @keyframes move {
+                0% {
+                    transform: translateX(-31em);
+                    opacity: 0;
+                }
+                30%,
+                60% {
+                    transform: translateX(0);
+                    opacity: 1;
+                }
+                100% {
+                    transform: translateX(31em);
+                    opacity: 0;
+                }
+            }
+            @keyframes move-right {
+                0% {
+                    transform: translateX(31em);
+                    opacity: 0;
+                }
+                30%,
+                60% {
+                    transform: translateX(0);
+                    opacity: 1;
+                }
+                100% {
+                    transform: translateX(-31em);
+                    opacity: 0;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            setTimeout(function(){
+               window.location = 'success.html';
+            }, 5000);
+         </script>
+        <h1>Transaction is being Processed..</h1>
+        <div class="container">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </body>
+</html>

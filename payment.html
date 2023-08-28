@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Plantify's Gateway</title>
+	<link rel="stylesheet" type="text/css" href="payment.css">
+	<link rel="stylesheet" href="C:\Users\Dev\OneDrive\Desktop\programming\plantify\plantify\assets\css/styles.css">
+
+	<script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+
+</head>
+<body>
+	<!-- <style>
+		#id{
+			display: none;
+		}
+	</style> -->
+<header>
+	<div class="container">
+		<div class="left">
+			<h1>
+			<a href="C:\Users\Dev\OneDrive\Desktop\programming\plantify\plantify\index.html" class="nav__logo">
+				<i class="ri-leaf-line nav__logo-icon"></i> Plantify
+				</a></h1>
+			<!--</a><h1 align="center">PLANTIFY</h1>-->
+			<h4>BILLING ADDRESS</h4>
+			<form action="transition.html" id="BillingForm" >
+				Full name
+				<input type="text" name="" id="Fname" placeholder="Enter name">
+				Email
+				<input type="text" name="" id="Email" placeholder="Enter email">
+
+				Address
+				<input type="text" name="" id="Address" placeholder="Enter address">
+				
+				City
+				<input type="text" name="" id="City" placeholder="Enter City">
+				<div id="zip">
+					<label>
+						State
+						<select id="state">
+							<option>Choose State..</option>
+							<option>Andhra Pradesh</option>
+							<option>Arunachal Pradesh</option>
+							<option>Assam</option>
+							<option>Bihar</option>
+							<option>Chattisgarh</option>
+							<option>Goa</option>
+							<option>Gujarat</option>
+							<option>Haryana</option>
+							<option>Himachal Pradhesh</option>
+							<option>Jammu & Kashmir</option>
+							<option>Jharkhand</option>
+							<option>Karnataka</option>
+							<option>Kerala</option>
+							<option>Madhya Pradesh</option>
+							<option>Maharashtra</option>
+							<option>Manipur</option>
+							<option>Meghalaya</option>
+							<option>Mizoram</option>
+							<option>Nagaland</option>
+							<option>Orissa</option>
+							<option>Punjab</option>
+							<option>Rajasthan</option>
+							<option>Sikkim</option>
+							<option>Tamil Nadu</option>
+							<option>Tripura</option>
+							<option>Andaman & Nicobar Islands</option>
+							<option>Chandigarh</option>
+							<option>Dadra & Nagar Haveli</option>
+							<option>Daman & Diu</option>
+							<option>Delhi</option>
+							<option>Lakshadweep</option>
+							<option>Pondicherry</option>
+						</select>
+					</label>
+						<label>
+						Zip code
+						<input type="number" name="" id="code" placeholder="Zip code">
+					</label>
+				</div>
+			<!-- </form> -->
+		</div>
+		<div class="right">
+			<h3>PAYMENT</h3>
+			<!-- <form id="PaymentForm"> -->
+				Accepted Card <br>
+				<img src="image/card1.png" width="100">
+				<img src="image/card2.png" width="50">
+				<br><br>
+
+				Credit card number<br>
+			<input type="text" name="" id="Credit" placeholder="Enter card number">
+				
+				<br>Exp month<br>
+				<input type="text" name="" id="Expiry" placeholder="Enter Month">
+				<div id="zip">
+					<label>
+						Exp year<br>
+						<select id="year">
+							<option>Choose Year..</option>
+							<option>2022</option>
+							<option>2023</option>
+							<option>2024</option>
+							<option>2025</option>
+							<option>2026</option>
+						</select>
+					</label>
+					</div>
+						<label>
+						CVV<br>
+						<input type="number" name="" id="Cvv" placeholder="CVV">
+					</label>
+
+				<input type="submit" onclick="CallSubmit()" name="" value="Proceed to Checkout">
+			</form>
+			
+		</div>
+	</div>
+</header>
+<script src="./gateway.js"></script>
+
+</body>
+</html>
